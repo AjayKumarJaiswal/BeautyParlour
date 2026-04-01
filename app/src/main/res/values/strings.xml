@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">BeautyParlour</string>
+    <string name="location_text">Hennur, Bengaluru</string>
+    <string name="profile_initials">AK</string>
+
+    <!-- Page 1 Home -->
+    <string name="search_hint_home">Search for parlors, services or artists&#8230;</string>
+    <string name="cat_haircut">Hair Cut</string>
+    <string name="cat_makeup">Makeup</string>
+    <string name="cat_facial">Facial</string>
+    <string name="cat_bridal">Bridal</string>
+    <string name="promo_text">10% OFF or Party Makeup</string>
+    <string name="trending_title">Trending Near You</string>
+    <string name="view_all">View All</string>
+    <string name="show_slider">Show Slider</string>
+    <string name="parlour_name_home">Parvan Spa</string>
+    <string name="rating_text">4.8 (1.5K Reviews)</string>
+    <string name="likes_count">3332</string>
+    <string name="tag_grooming">Grooming</string>
+    <string name="tag_spa">Spa</string>
+    <string name="tag_luxury">Luxury</string>
+    <string name="package_deal_title">$90 PACKAGE DEALS</string>
+    <string name="package_deal_sub">\"Harm Facial + Main Post\"</string>
+    <string name="top_parlors_title">Top Beauty Parlors Near You</string>
+    <string name="guide_scroll">↓ Scroll to explore ↓</string>
+
+    <!-- Category Pages Common -->
+    <string name="filtered_by">Filtered by</string>
+    <string name="popular_artist">Popular Artist</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="portfolio_title">Portfolio &amp; Style Guide</string>
+
+    <!-- Hair Cut Page -->
+    <string name="tag_hair_cut_filter">✂ Hair Cut</string>
+    <string name="hair_styles_title">Hair Styles</string>
+    <string name="hair_treatment_title">Hair Treatment</string>
+    <string name="style_bob">Bob</string>
+    <string name="style_layered">Layered</string>
+    <string name="style_keratin">Keratin</string>
+
+    <!-- Makeup Page -->
+    <string name="tag_makeup_filter">💄 Makeup</string>
+
+    <!-- Facial Page -->
+    <string name="skincare_clinic">Skincare Clinic</string>
+
+    <!-- Bridal Page -->
+    <string name="bridal_studio">Premium Bridal Studio</string>
+
+    <!-- Detail/Portfolio Page Content -->
+    <string name="parlour_name_detail">Glow &amp; Glam Spa</string>
+    <string name="verified_text">Verified</string>
+    <string name="distance_text">1.2 km</string>
+    <string name="portfolio_item_1">Party Makeup for Sarah</string>
+    <string name="portfolio_item_2">Keratin Treatment for Rahul</string>
+    <string name="portfolio_item_3">Hair Styling for Aman</string>
+    <string name="portfolio_item_4">Skin treatment for Neha</string>
+    <string name="exp_sarah">User experience for Sarah</string>
+    <string name="exp_rahul">Amazing experience for Rahul</string>
+    <string name="exp_aman">User experience for Aman</string>
+    <string name="exp_neha">Amazing experience for Neha</string>
+    <string name="rating_val">4.9</string>
+
+    <!-- Services Section -->
+    <string name="services_title">Services and Packages</string>
+    <string name="service_makeup">Premium Party Makeup</string>
+    <string name="service_keratin">Keratin Treatment</string>
+    <string name="service_hair">Hair Styling for Aman</string>
+    <string name="service_skin">Skin treatment for Neha</string>
+    <string name="price_makeup">₹1499</string>
+    <string name="price_keratin">₹2999</string>
+    <string name="price_hair">₹799</string>
+    <string name="price_skin">₹999</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="book_my_order">Book My Order</string>
+    <string name="continue_browse">*Continue browsing for more</string>
+    <string name="home_service_avail">+ Home Service Available</string>
+
+    <!-- General UI -->
+    <string name="my_cart_count">My Cart (3)</string>
+    <string name="my_order_count">My Order (3)</string>
+    <string name="salon_loc_btn">Glow &amp; Glam Location</string>
+    <string name="back">Back</string>
+    <string name="share">Share</string>
+</resources>
