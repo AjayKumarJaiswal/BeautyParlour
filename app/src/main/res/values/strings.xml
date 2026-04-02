@@ -29,23 +29,61 @@
     <string name="popular_artist">Popular Artist</string>
     <string name="portfolio">Portfolio</string>
     <string name="portfolio_title">Portfolio &amp; Style Guide</string>
+    <string name="filter">Filter</string>
 
     <!-- Hair Cut Page -->
     <string name="tag_hair_cut_filter">✂ Hair Cut</string>
-    <string name="hair_styles_title">Hair Styles</string>
-    <string name="hair_treatment_title">Hair Treatment</string>
-    <string name="style_bob">Bob</string>
-    <string name="style_layered">Layered</string>
-    <string name="style_keratin">Keratin</string>
+    <string name="service_classic_haircut">Classic Haircut</string>
+    <string name="service_hair_spa">Hair Spa &amp; Wash</string>
+    <string name="service_beard_trim">Beard Trim &amp; Shape</string>
+    <string name="service_hair_color">Premium Hair Coloring</string>
+    <string name="service_head_massage">Relaxing Head Massage</string>
+    <string name="price_classic_haircut">₹499</string>
+    <string name="price_hair_spa">₹899</string>
+    <string name="price_beard_trim">₹299</string>
+    <string name="price_hair_color">₹1999</string>
+    <string name="price_head_massage">₹399</string>
 
     <!-- Makeup Page -->
     <string name="tag_makeup_filter">💄 Makeup</string>
+    <string name="service_party_makeup">Party Makeup</string>
+    <string name="service_bridal_makeup">Bridal Makeup</string>
+    <string name="service_engagement_makeup">Engagement Makeup</string>
+    <string name="service_eye_makeup">Eye Makeup Only</string>
+    <string name="service_airbrush_makeup">Airbrush HD Makeup</string>
+    <string name="price_party_makeup">₹1499</string>
+    <string name="price_bridal_makeup">₹4999</string>
+    <string name="price_engagement_makeup">₹2999</string>
+    <string name="price_eye_makeup">₹599</string>
+    <string name="price_airbrush_makeup">₹3499</string>
 
     <!-- Facial Page -->
+    <string name="tag_facial_filter">💆 Facial</string>
     <string name="skincare_clinic">Skincare Clinic</string>
+    <string name="service_fruit_facial">Fruit Facial</string>
+    <string name="service_gold_facial">Gold Glow Facial</string>
+    <string name="service_diamond_facial">Diamond Facial</string>
+    <string name="service_detan_pack">Face De-tan Pack</string>
+    <string name="service_hydra_facial">Hydra Facial</string>
+    <string name="price_fruit_facial">₹699</string>
+    <string name="price_gold_facial">₹1299</string>
+    <string name="price_diamond_facial">₹1599</string>
+    <string name="price_detan_pack">₹399</string>
+    <string name="price_hydra_facial">₹2499</string>
 
     <!-- Bridal Page -->
+    <string name="tag_bridal_filter">👰 Bridal</string>
     <string name="bridal_studio">Premium Bridal Studio</string>
+    <string name="service_full_bridal_package">Full Bridal Package</string>
+    <string name="service_mehendi_art">Bridal Mehendi Art</string>
+    <string name="service_hair_styling">Wedding Hair Styling</string>
+    <string name="service_saree_draping">Saree Draping</string>
+    <string name="service_pre_bridal_grooming">Pre-Bridal Grooming</string>
+    <string name="price_full_bridal_package">₹9999</string>
+    <string name="price_mehendi_art">₹1999</string>
+    <string name="price_hair_styling">₹1499</string>
+    <string name="price_saree_draping">₹499</string>
+    <string name="price_pre_bridal_grooming">₹3999</string>
 
     <!-- Detail/Portfolio Page Content -->
     <string name="parlour_name_detail">Glow &amp; Glam Spa</string>
@@ -64,16 +102,10 @@
     <!-- Services Section -->
     <string name="services_title">Services and Packages</string>
     <string name="service_makeup">Premium Party Makeup</string>
-    <string name="service_keratin">Keratin Treatment</string>
-    <string name="service_hair">Hair Styling for Aman</string>
-    <string name="service_skin">Skin treatment for Neha</string>
     <string name="price_makeup">₹1499</string>
-    <string name="price_keratin">₹2999</string>
-    <string name="price_hair">₹799</string>
-    <string name="price_skin">₹999</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="book_my_order">Book My Order</string>
-    <string name="continue_browse">*Continue browsing for more</string>
+    <string name="continue_browse">*Continue browsing for more or select to book.</string>
     <string name="home_service_avail">+ Home Service Available</string>
 
     <!-- General UI -->
@@ -82,4 +114,29 @@
     <string name="salon_loc_btn">Glow &amp; Glam Location</string>
     <string name="back">Back</string>
     <string name="share">Share</string>
+    <string name="search">Search</string>
+
+    <!-- Login & OTP -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Enter your phone number to continue</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="otp_title">Verify OTP</string>
+    <string name="otp_subtitle">Enter the 6-digit code sent to your number</string>
+    <string name="verify_proceed">Verify &amp; Proceed</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="invalid_phone">Please enter a valid phone number</string>
+    <string name="invalid_otp">Invalid OTP code</string>
+
+    <!-- Chat Page -->
+    <string name="chat_time">Chat Time</string>
+    <string name="chat_assist_msg">How can we assist you today?</string>
+    <string name="chat_typing_hint">Type your message&#8230;</string>
+    <string name="chat_welcome_msg">You\'re chatting with Glow &amp; Glam Spa\nTypically replies in a few minutes</string>
+    <string name="chat_initial_response">Hello! How may I assist you today?</string>
+    <string name="btn_learn_more">Learn More</string>
+    <string name="btn_book_appt">Book Appointment</string>
+    <string name="btn_pricing">Pricing Details</string>
+    <string name="btn_packages">Services &amp; Packages</string>
+    <string name="chat_hint">Type your message...</string>
 </resources>
