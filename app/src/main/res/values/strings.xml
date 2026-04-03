@@ -22,7 +22,6 @@
     <string name="package_deal_title">$90 PACKAGE DEALS</string>
     <string name="package_deal_sub">\"Harm Facial + Main Post\"</string>
     <string name="top_parlors_title">Top Beauty Parlors Near You</string>
-    <string name="guide_scroll">↓ Scroll to explore ↓</string>
 
     <!-- Category Pages Common -->
     <string name="filtered_by">Filtered by</string>
@@ -33,11 +32,18 @@
 
     <!-- Hair Cut Page -->
     <string name="tag_hair_cut_filter">✂ Hair Cut</string>
+    <string name="hair_styles_title">Hair Styles</string>
+    <string name="hair_treatment_title">Hair Treatment</string>
+    <string name="style_bob">Bob</string>
+    <string name="style_layered">Layered</string>
+    <string name="style_keratin">Keratin</string>
+
     <string name="service_classic_haircut">Classic Haircut</string>
     <string name="service_hair_spa">Hair Spa &amp; Wash</string>
     <string name="service_beard_trim">Beard Trim &amp; Shape</string>
     <string name="service_hair_color">Premium Hair Coloring</string>
     <string name="service_head_massage">Relaxing Head Massage</string>
+
     <string name="price_classic_haircut">₹499</string>
     <string name="price_hair_spa">₹899</string>
     <string name="price_beard_trim">₹299</string>
@@ -95,8 +101,6 @@
     <string name="portfolio_item_4">Skin treatment for Neha</string>
     <string name="exp_sarah">User experience for Sarah</string>
     <string name="exp_rahul">Amazing experience for Rahul</string>
-    <string name="exp_aman">User experience for Aman</string>
-    <string name="exp_neha">Amazing experience for Neha</string>
     <string name="rating_val">4.9</string>
 
     <!-- Services Section -->
@@ -115,6 +119,16 @@
     <string name="back">Back</string>
     <string name="share">Share</string>
     <string name="search">Search</string>
+
+    <!-- Profile Section -->
+    <string name="profile_title">Profile Settings</string>
+    <string name="edit_name">Edit Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_bio">Edit Bio</string>
+    <string name="edit_description">Edit Description</string>
+    <string name="logout">Logout</string>
+    <string name="user_name">Ajay Kumar</string>
+    <string name="user_bio">Beauty Enthusiast | Tech Lover</string>
 
     <!-- Login & OTP -->
     <string name="login_title">Welcome Back</string>

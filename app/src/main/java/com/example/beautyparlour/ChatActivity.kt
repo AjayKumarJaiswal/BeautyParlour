@@ -35,21 +35,21 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // WhatsApp-style keyboard handling logic
+        // Handle window insets to keep the input above the keyboard
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            val imeInsets = insets.getInsets(WindowInsetsCompat.Type.ime())
+            val ime = insets.getInsets(WindowInsetsCompat.Type.ime())
             
-            // Set top padding for status bar and bottom padding for keyboard/nav bar
+            // Apply bottom padding based on keyboard visibility
             v.updatePadding(
                 left = systemBars.left,
                 top = systemBars.top,
                 right = systemBars.right,
-                bottom = if (imeInsets.bottom > 0) imeInsets.bottom else systemBars.bottom
+                bottom = if (ime.bottom > 0) ime.bottom else systemBars.bottom
             )
             
-            // Automatically scroll to bottom when keyboard opens
-            if (imeInsets.bottom > 0 && messages.isNotEmpty()) {
+            // Scroll to bottom when keyboard opens
+            if (ime.bottom > 0 && messages.isNotEmpty()) {
                 binding.rvMessages.postDelayed({
                     binding.rvMessages.smoothScrollToPosition(messages.size - 1)
                 }, 100)
@@ -62,7 +62,7 @@ class ChatActivity : AppCompatActivity() {
     private fun setupChat() {
         adapter = ChatAdapter(messages)
         binding.rvMessages.layoutManager = LinearLayoutManager(this).apply {
-            stackFromEnd = true // Start showing messages from bottom
+            stackFromEnd = true // Start from bottom like a real chat
         }
         binding.rvMessages.adapter = adapter
     }
@@ -96,10 +96,8 @@ class ChatActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val response = when {
                 userMsg.contains("price", true) || userMsg.contains("cost", true) -> 
-                    "The treatment costs depend on the service. For example, Keratin is ₹2999."
-                userMsg.contains("appointment", true) || userMsg.contains("book", true) -> 
-                    "You can book an appointment directly through our app or I can help you here!"
-                else -> "Of course! How can I help you with our services today?"
+                    "Our Keratin Treatment is ₹2999."
+                else -> "Of course! Let me know if you need more details."
             }
             addBotMessage(response)
         }, 1500)

@@ -1,5 +1,6 @@
 package com.example.beautyparlour
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -14,6 +15,7 @@ class OtpActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOtpBinding
     private var phoneNumber: String? = null
     private var correctOtp: String? = null
+    private val sharedPrefs by lazy { getSharedPreferences("UserPrefs", Context.MODE_PRIVATE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +51,9 @@ class OtpActivity : AppCompatActivity() {
             
             // Validate entered OTP against the simulated generated one
             if (enteredOtp == correctOtp) {
+                // Set login status to true
+                sharedPrefs.edit().putBoolean("isLoggedIn", true).apply()
+
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)

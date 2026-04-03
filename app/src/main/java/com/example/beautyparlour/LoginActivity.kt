@@ -1,5 +1,6 @@
 package com.example.beautyparlour
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -8,14 +9,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.beautyparlour.databinding.ActivityLoginBinding
-import kotlin.random.Random
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private val sharedPrefs by lazy { getSharedPreferences("UserPrefs", Context.MODE_PRIVATE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Check if user is already logged in
+        if (sharedPrefs.getBoolean("isLoggedIn", false)) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            return
+        }
+
         initViewBinding()
         setupListeners()
     }
@@ -36,11 +45,11 @@ class LoginActivity : AppCompatActivity() {
         binding.btnGetOtp.setOnClickListener {
             val phone = binding.etPhone.text.toString().trim()
             if (phone.length == 10) {
-                // Simulated OTP generation (Product level logic simulation)
+                // Simulated OTP generation
                 val generatedOtp = (100000..999999).random().toString()
                 
-                // Real SMS simulation: Show OTP in a Toast
-                Toast.makeText(this, "Simulated SMS Sent: Your OTP is $generatedOtp", Toast.LENGTH_LONG).show()
+                // Simulation: Show OTP in Toast
+                Toast.makeText(this, "Simulated SMS: Your OTP is $generatedOtp", Toast.LENGTH_LONG).show()
 
                 val intent = Intent(this, OtpActivity::class.java).apply {
                     putExtra("PHONE_NUMBER", phone)
