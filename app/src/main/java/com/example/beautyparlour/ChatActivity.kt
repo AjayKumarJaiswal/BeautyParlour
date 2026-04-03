@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.beautyparlour.databinding.ActivityChatBinding
 import java.text.SimpleDateFormat
@@ -34,16 +35,35 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // WhatsApp-style keyboard handling logic
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            val imeInsets = insets.getInsets(WindowInsetsCompat.Type.ime())
+            
+            // Set top padding for status bar and bottom padding for keyboard/nav bar
+            v.updatePadding(
+                left = systemBars.left,
+                top = systemBars.top,
+                right = systemBars.right,
+                bottom = if (imeInsets.bottom > 0) imeInsets.bottom else systemBars.bottom
+            )
+            
+            // Automatically scroll to bottom when keyboard opens
+            if (imeInsets.bottom > 0 && messages.isNotEmpty()) {
+                binding.rvMessages.postDelayed({
+                    binding.rvMessages.smoothScrollToPosition(messages.size - 1)
+                }, 100)
+            }
+            
             insets
         }
     }
 
     private fun setupChat() {
         adapter = ChatAdapter(messages)
-        binding.rvMessages.layoutManager = LinearLayoutManager(this)
+        binding.rvMessages.layoutManager = LinearLayoutManager(this).apply {
+            stackFromEnd = true // Start showing messages from bottom
+        }
         binding.rvMessages.adapter = adapter
     }
 
