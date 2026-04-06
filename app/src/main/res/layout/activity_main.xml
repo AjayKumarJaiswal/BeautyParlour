@@ -70,17 +70,6 @@
                             android:textSize="10sp"
                             android:maxLines="1"
                             android:ellipsize="end" />
-
-                        <TextView
-                            android:id="@+id/tvUserDesc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Passionate about style"
-                            android:textColor="@color/text_gray"
-                            android:textSize="9sp"
-                            android:maxLines="1"
-                            android:ellipsize="end"
-                            android:visibility="gone" />
                     </LinearLayout>
 
                     <ImageView
@@ -332,8 +321,39 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <!-- PORTFOLIO GRID -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="8dp" android:text="@string/portfolio_title" android:textColor="@color/black" android:textSize="20sp" android:textStyle="bold" />
+                <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp" android:columnCount="2">
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:background="#D0D0D0" android:scaleType="centerCrop" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/portfolio_item_1" android:textStyle="bold" android:textSize="12sp" android:textColor="@color/black" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="★ 4.9" android:textSize="11sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:background="#C0C0C0" android:scaleType="centerCrop" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/portfolio_item_2" android:textStyle="bold" android:textSize="12sp" android:textColor="@color/black" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="★ 4.9" android:textSize="11sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </GridLayout>
+
+                <!-- SERVICE LIST/GRID -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:text="@string/services_title" android:textColor="@color/black" android:textSize="20sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <include android:id="@+id/cardDetailService1" layout="@layout/item_service_card" />
+                    <include android:id="@+id/cardDetailService2" layout="@layout/item_service_card" />
+                </LinearLayout>
             </LinearLayout>
 
+            <!-- CATEGORY SPECIFIC PAGES -->
             <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                 <LinearLayout android:id="@+id/pageHairCut" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                     <include android:id="@+id/cardHairCut1" layout="@layout/item_service_card" />
@@ -342,6 +362,7 @@
                     <include android:id="@+id/cardHairCut4" layout="@layout/item_service_card" />
                     <include android:id="@+id/cardHairCut5" layout="@layout/item_service_card" />
                 </LinearLayout>
+
                 <LinearLayout android:id="@+id/pageMakeup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                     <include android:id="@+id/cardMakeup1" layout="@layout/item_service_card" />
                     <include android:id="@+id/cardMakeup2" layout="@layout/item_service_card" />
@@ -349,6 +370,7 @@
                     <include android:id="@+id/cardMakeup4" layout="@layout/item_service_card" />
                     <include android:id="@+id/cardMakeup5" layout="@layout/item_service_card" />
                 </LinearLayout>
+
                 <LinearLayout android:id="@+id/pageFacial" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                     <include android:id="@+id/cardFacial1" layout="@layout/item_service_card" />
                     <include android:id="@+id/cardFacial2" layout="@layout/item_service_card" />
@@ -356,6 +378,7 @@
                     <include android:id="@+id/cardFacial4" layout="@layout/item_service_card" />
                     <include android:id="@+id/cardFacial5" layout="@layout/item_service_card" />
                 </LinearLayout>
+
                 <LinearLayout android:id="@+id/pageBridal" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                     <include android:id="@+id/cardBridal1" layout="@layout/item_service_card" />
                     <include android:id="@+id/cardBridal2" layout="@layout/item_service_card" />

@@ -17,6 +17,11 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.beautyparlour.databinding.ActivityMainBinding
 import com.example.beautyparlour.databinding.ItemServiceCardBinding
 
+/**
+ * Professional Developer Standard MainActivity
+ * Handles navigation between Home, Category Pages, and Salon Details.
+ * Dynamically updates header with user profile information.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -24,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private var isAtHome = true
     private val sharedPrefs by lazy { getSharedPreferences("UserPrefs", Context.MODE_PRIVATE) }
 
+    // System back button handler
     private val backPressedCallback = object : OnBackPressedCallback(false) {
         override fun handleOnBackPressed() {
             navigateToHome()
@@ -38,9 +44,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Setup ViewBinding and Edge-to-Edge
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         enableEdgeToEdge()
+        
+        // Register back press handler
         onBackPressedDispatcher.addCallback(this, backPressedCallback)
 
         initUI()
@@ -48,54 +58,78 @@ class MainActivity : AppCompatActivity() {
         setupAutoSlider()
         setupServiceData()
         
+        // Initial Page State
         navigateToHome()
+        
         applyWindowInsets()
     }
 
     override fun onResume() {
         super.onResume()
+        // Refresh header every time user returns from Profile
         refreshProfileInHeader()
         if (isAtHome) resetSliderTimer()
     }
 
     private fun initUI() {
         with(binding) {
+            // Setup Trending List
             rvAllTrending.apply {
                 layoutManager = LinearLayoutManager(this@MainActivity)
                 adapter = trendingAdapter
             }
+            
+            // Setup Trending Slider
             trendingViewPager.adapter = trendingAdapter
         }
         refreshProfileInHeader()
     }
 
+    /**
+     * Loads user profile from SharedPreferences and updates the header.
+     */
     private fun refreshProfileInHeader() {
         val name = sharedPrefs.getString("user_name", "Ajay Kumar") ?: "Ajay Kumar"
         val bio = sharedPrefs.getString("user_bio", "Beauty Enthusiast") ?: "Beauty Enthusiast"
         
+        // Update header only if we are on the Home page
         if (isAtHome) {
             binding.tvHeaderTitle.text = name
             binding.tvUserBio.text = bio
             binding.tvUserBio.isVisible = true
         }
 
+        // Generate and update initials (e.g., "Rahul Sharma" -> "RS")
         val initials = name.split(" ")
             .filter { it.isNotBlank() }
             .take(2)
             .map { it[0].uppercaseChar() }
             .joinToString("")
+        
         binding.tvProfileIcon.text = if (initials.isNotEmpty()) initials else "AK"
     }
 
     private fun setupListeners() {
         with(binding) {
+            // Category Navigation
             btnHairCut.setOnClickListener { navigateToCategory(getString(R.string.cat_haircut)) }
             btnMakeup.setOnClickListener { navigateToCategory(getString(R.string.cat_makeup)) }
             btnFacial.setOnClickListener { navigateToCategory(getString(R.string.cat_facial)) }
             btnBridal.setOnClickListener { navigateToCategory(getString(R.string.cat_bridal)) }
             
-            llHomeBack.setOnClickListener { if (!isAtHome) navigateToHome() }
+            // Header Back Click
+            llHomeBack.setOnClickListener {
+                if (!isAtHome) {
+                    navigateToHome()
+                }
+            }
 
+            // Back from Salon Detail
+            ivBackFromDetail.setOnClickListener {
+                navigateToHome()
+            }
+
+            // View All Toggle
             tvViewAll.setOnClickListener {
                 val isListViewVisible = rvAllTrending.isVisible
                 rvAllTrending.isVisible = !isListViewVisible
@@ -103,10 +137,13 @@ class MainActivity : AppCompatActivity() {
                 tvViewAll.text = if (isListViewVisible) getString(R.string.view_all) else getString(R.string.show_slider)
             }
 
+            // Chat Icon Click
             ivSalonChat.setOnClickListener {
-                startActivity(Intent(this@MainActivity, ChatActivity::class.java))
+                val intent = Intent(this@MainActivity, ChatActivity::class.java)
+                startActivity(intent)
             }
 
+            // Profile Click
             flProfile.setOnClickListener {
                 startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
             }
@@ -115,6 +152,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupServiceData() {
         with(binding) {
+            // Setup cards with data from strings.xml
             setupCard(cardHairCut1, R.string.service_classic_haircut, R.string.price_classic_haircut)
             setupCard(cardHairCut2, R.string.service_hair_spa, R.string.price_hair_spa)
             setupCard(cardHairCut3, R.string.service_beard_trim, R.string.price_beard_trim)
@@ -138,6 +176,10 @@ class MainActivity : AppCompatActivity() {
             setupCard(cardBridal3, R.string.service_hair_styling, R.string.price_hair_styling)
             setupCard(cardBridal4, R.string.service_saree_draping, R.string.price_saree_draping)
             setupCard(cardBridal5, R.string.service_pre_bridal_grooming, R.string.price_pre_bridal_grooming)
+
+            // Setup Salon Detail specific cards
+            setupCard(cardDetailService1, R.string.service_makeup, R.string.price_makeup)
+            setupCard(cardDetailService2, R.string.service_keratin, R.string.price_keratin)
         }
     }
 

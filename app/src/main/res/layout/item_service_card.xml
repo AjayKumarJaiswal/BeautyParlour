@@ -41,6 +41,7 @@
                 android:layout_marginTop="12dp">
 
                 <TextView
+                    android:id="@+id/btnAddToCart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_tag"
@@ -48,9 +49,12 @@
                     android:paddingVertical="6dp"
                     android:text="@string/add_to_cart"
                     android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"/>
 
                 <TextView
+                    android:id="@+id/btnBookNow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -59,7 +63,9 @@
                     android:paddingVertical="6dp"
                     android:text="@string/book_my_order"
                     android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"/>
             </LinearLayout>
         </LinearLayout>
 

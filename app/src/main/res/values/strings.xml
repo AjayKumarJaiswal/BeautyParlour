@@ -22,6 +22,7 @@
     <string name="package_deal_title">$90 PACKAGE DEALS</string>
     <string name="package_deal_sub">\"Harm Facial + Main Post\"</string>
     <string name="top_parlors_title">Top Beauty Parlors Near You</string>
+    <string name="guide_scroll">↓ Scroll to explore ↓</string>
 
     <!-- Category Pages Common -->
     <string name="filtered_by">Filtered by</string>
@@ -106,7 +107,9 @@
     <!-- Services Section -->
     <string name="services_title">Services and Packages</string>
     <string name="service_makeup">Premium Party Makeup</string>
+    <string name="service_keratin">Keratin Treatment</string>
     <string name="price_makeup">₹1499</string>
+    <string name="price_keratin">₹2999</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="book_my_order">Book My Order</string>
     <string name="continue_browse">*Continue browsing for more or select to book.</string>
@@ -119,16 +122,6 @@
     <string name="back">Back</string>
     <string name="share">Share</string>
     <string name="search">Search</string>
-
-    <!-- Profile Section -->
-    <string name="profile_title">Profile Settings</string>
-    <string name="edit_name">Edit Name</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="edit_bio">Edit Bio</string>
-    <string name="edit_description">Edit Description</string>
-    <string name="logout">Logout</string>
-    <string name="user_name">Ajay Kumar</string>
-    <string name="user_bio">Beauty Enthusiast | Tech Lover</string>
 
     <!-- Login & OTP -->
     <string name="login_title">Welcome Back</string>
@@ -153,4 +146,14 @@
     <string name="btn_pricing">Pricing Details</string>
     <string name="btn_packages">Services &amp; Packages</string>
     <string name="chat_hint">Type your message...</string>
+
+    <!-- Profile Section -->
+    <string name="profile_title">Profile Settings</string>
+    <string name="edit_name">Edit Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_bio">Edit Bio</string>
+    <string name="edit_description">Edit Description</string>
+    <string name="logout">Logout</string>
+    <string name="user_name">Ajay Kumar</string>
+    <string name="user_bio">Beauty Enthusiast | Tech Lover</string>
 </resources>
