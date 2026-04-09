@@ -400,13 +400,23 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingHorizontal="20dp">
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/btnNavCart"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical"
+            android:clickable="true" android:focusable="true">
             <ImageView android:layout_width="26dp" android:layout_height="26dp" android:src="@android:drawable/ic_menu_view" android:contentDescription="@null" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_cart_count" android:textColor="@color/black" android:textSize="10sp" />
+            <TextView
+                android:id="@+id/tvCartCount"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_cart_count" android:textColor="@color/black" android:textSize="10sp" />
         </LinearLayout>
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="28dp" android:gravity="center" android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/btnNavOrders"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="28dp" android:gravity="center" android:orientation="vertical"
+            android:clickable="true" android:focusable="true">
             <ImageView android:layout_width="26dp" android:layout_height="26dp" android:src="@android:drawable/ic_menu_agenda" android:contentDescription="@null" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_order_count" android:textColor="@color/black" android:textSize="10sp" />
+            <TextView
+                android:id="@+id/tvOrderCount"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_order_count" android:textColor="@color/black" android:textSize="10sp" />
         </LinearLayout>
         <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_tag" android:backgroundTint="#F5F5F5" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingVertical="10dp">

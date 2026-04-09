@@ -156,4 +156,7 @@
     <string name="logout">Logout</string>
     <string name="user_name">Ajay Kumar</string>
     <string name="user_bio">Beauty Enthusiast | Tech Lover</string>
+
+    <!-- Google Login -->
+    <string name="google_web_client_id">your_google_client_id_here.apps.googleusercontent.com</string>
 </resources>

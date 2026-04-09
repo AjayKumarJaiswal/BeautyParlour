@@ -5,12 +5,18 @@
     <color name="bg_cream">#FFFBF5</color>
     <color name="top_bg">#f6e4d0</color>
     <color name="search_hint">#9E9E9E</color>
-    <color name="primary_button">#00332B</color>
+
+    <!-- Design System Colors -->
+    <color name="primary_teal">#008080</color>
+    <color name="primary_teal_dark">#006666</color>
+    <color name="primary_teal_light">#E0F2F2</color>
+
+    <color name="primary_button">#008080</color>
     <color name="tag_bg">#F5F5F5</color>
     <color name="heart_red">#FF5252</color>
     <color name="star_gold">#FFD700</color>
     <color name="banner_orange">#FFD8B1</color>
     <color name="text_main">#333333</color>
     <color name="text_gray">#757575</color>
-    <color name="profile_circle">#E6BEA5</color>
+    <color name="profile_circle">#008080</color>
 </resources>
